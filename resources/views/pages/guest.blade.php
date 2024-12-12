@@ -86,6 +86,53 @@
                 </div>
             </div>
         </section>
+
+        @if (request('tahun'))
+            <section class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="text-center">Tabel Perangkingan Alternatif</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th>No</th>
+                                            <th>Nama Alternatif</th>
+                                            <th>Skor Akhir</th>
+                                            <th>Ranking</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @php
+                                            $selectedYear = request('tahun');
+                                            $filteredScores = collect($groupedScoresByYear)
+                                                ->when($selectedYear, function ($collection) use ($selectedYear) {
+                                                    return $collection->only($selectedYear);
+                                                })
+                                                ->flatten(1)
+                                                ->sortByDesc('score')
+                                                ->values();
+                                        @endphp
+
+                                        @foreach ($filteredScores as $index => $score)
+                                            <tr>
+                                                <td>{{ $index + 1 }}</td>
+                                                <td>{{ $score['alternatif'] }}</td>
+                                                <td>{{ number_format($score['score'], 2) }}</td>
+                                                <td>{{ $index + 1 }}</td>
+                                            </tr>
+                                        @endforeach
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        @endif
     </div>
 
     <style>
@@ -188,7 +235,10 @@
                                             `C1: ${scoreData.c1}<br>` +
                                             `C2: ${scoreData.c2}<br>` +
                                             `C3: ${scoreData.c3}<br>` +
-                                            `C4: ${scoreData.c4}<br>`;
+                                            `C4: ${scoreData.c4}<br>` +
+                                            `C5: ${scoreData.c5}<br>` +
+                                            `C6: ${scoreData.c6}<br>` +
+                                            `C7: ${scoreData.c7}<br>`;
                                         layer.bindPopup(popupContent);
                                     }
                                 }).addTo(map);

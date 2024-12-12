@@ -229,6 +229,9 @@ class DashboardController extends Controller
                 'c2' => $alternatif->c2,
                 'c3' => $alternatif->c3,
                 'c4' => $alternatif->c4,
+                'c5' => $alternatif->c5,
+                'c6' => $alternatif->c6,
+                'c7' => $alternatif->c7,
                 'nilaiAkhirPerKriteria' => $nilaiAkhirPerKriteria,
                 'score' => $totalBenefit - $totalCost // Hitung score akhir
             ];
@@ -365,6 +368,9 @@ class DashboardController extends Controller
                 'c2' => $alternatif->c2,
                 'c3' => $alternatif->c3,
                 'c4' => $alternatif->c4,
+                'c5' => $alternatif->c5,
+                'c6' => $alternatif->c6,
+                'c7' => $alternatif->c7,
                 'nilaiAkhirPerKriteria' => $nilaiAkhirPerKriteria,
                 'score' => $totalBenefit - $totalCost // Hitung score akhir
             ];

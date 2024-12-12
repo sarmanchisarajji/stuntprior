@@ -135,7 +135,7 @@ class AlternatifSeeder extends Seeder
             'c4' => 157,
             'c5' => 12,
             'c6' => 466,
-            'c7' => 23,
+            'c7' => 3,
             'tahun_pemilihan' => '2023',
             // 'latitude' => '-4.003396272006417',
             // 'longitude' => '122.61215401118976'

@@ -27,22 +27,22 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 1,
             'id_kriteria' => 3,
-            'nilai' => 0.15,
+            'nilai' => 0.06,
         ]);
         Penilaian::create([
             'id_alternatif' => 1,
             'id_kriteria' => 4,
-            'nilai' => 0.26,
+            'nilai' => 0.11,
         ]);
         Penilaian::create([
             'id_alternatif' => 1,
             'id_kriteria' => 5,
-            'nilai' => 0.26,
+            'nilai' => 0.11,
         ]);
         Penilaian::create([
             'id_alternatif' => 1,
             'id_kriteria' => 6,
-            'nilai' => 0.26,
+            'nilai' => 0.15,
         ]);
         Penilaian::create([
             'id_alternatif' => 1,
@@ -64,11 +64,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 2,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 2,
             'id_kriteria' => 4,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 2,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 2,
+            'id_kriteria' => 6,
+            'nilai' => 0.09,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 2,
+            'id_kriteria' => 7,
             'nilai' => 0.51,
         ]);
 
@@ -86,11 +101,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 3,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 3,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 3,
+            'id_kriteria' => 5,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 3,
+            'id_kriteria' => 6,
+            'nilai' => 0.09,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 3,
+            'id_kriteria' => 7,
             'nilai' => 0.51,
         ]);
 
@@ -108,11 +138,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 4,
             'id_kriteria' => 3,
-            'nilai' => 0.45,
+            'nilai' => 0.51,
         ]);
         Penilaian::create([
             'id_alternatif' => 4,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 4,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 4,
+            'id_kriteria' => 6,
+            'nilai' => 0.45,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 4,
+            'id_kriteria' => 7,
             'nilai' => 0.13,
         ]);
 
@@ -130,11 +175,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 5,
             'id_kriteria' => 3,
-            'nilai' => 0.45,
+            'nilai' => 0.51,
         ]);
         Penilaian::create([
             'id_alternatif' => 5,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 5,
+            'id_kriteria' => 5,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 5,
+            'id_kriteria' => 6,
+            'nilai' => 0.45,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 5,
+            'id_kriteria' => 7,
             'nilai' => 0.13,
         ]);
 
@@ -152,11 +212,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 6,
             'id_kriteria' => 3,
-            'nilai' => 0.15,
+            'nilai' => 0.51,
         ]);
         Penilaian::create([
             'id_alternatif' => 6,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 6,
+            'id_kriteria' => 5,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 6,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 6,
+            'id_kriteria' => 7,
             'nilai' => 0.06,
         ]);
 
@@ -169,16 +244,31 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 7,
             'id_kriteria' => 2,
-            'nilai' => 0.26,
+            'nilai' => 0.11,
         ]);
         Penilaian::create([
             'id_alternatif' => 7,
             'id_kriteria' => 3,
-            'nilai' => 0.15,
+            'nilai' => 0.06,
         ]);
         Penilaian::create([
             'id_alternatif' => 7,
             'id_kriteria' => 4,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 7,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 7,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 7,
+            'id_kriteria' => 7,
             'nilai' => 0.06,
         ]);
 
@@ -191,16 +281,31 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 8,
             'id_kriteria' => 2,
-            'nilai' => 0.61,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 8,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.13,
         ]);
         Penilaian::create([
             'id_alternatif' => 8,
             'id_kriteria' => 4,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 8,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 8,
+            'id_kriteria' => 6,
+            'nilai' => 0.09,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 8,
+            'id_kriteria' => 7,
             'nilai' => 0.13,
         ]);
 
@@ -218,11 +323,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 9,
             'id_kriteria' => 3,
-            'nilai' => 0.04,
+            'nilai' => 0.06,
         ]);
         Penilaian::create([
             'id_alternatif' => 9,
             'id_kriteria' => 4,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 9,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 9,
+            'id_kriteria' => 6,
+            'nilai' => 0.04,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 9,
+            'id_kriteria' => 7,
             'nilai' => 0.06,
         ]);
 
@@ -235,16 +355,31 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 10,
             'id_kriteria' => 2,
-            'nilai' => 0.61,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 10,
             'id_kriteria' => 3,
-            'nilai' => 0.15,
+            'nilai' => 0.13,
         ]);
         Penilaian::create([
             'id_alternatif' => 10,
             'id_kriteria' => 4,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 10,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 10,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 10,
+            'id_kriteria' => 7,
             'nilai' => 0.06,
         ]);
 
@@ -262,11 +397,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 11,
             'id_kriteria' => 3,
-            'nilai' => 0.25,
+            'nilai' => 0.51,
         ]);
         Penilaian::create([
             'id_alternatif' => 11,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 11,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 11,
+            'id_kriteria' => 6,
+            'nilai' => 0.25,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 11,
+            'id_kriteria' => 7,
             'nilai' => 0.26,
         ]);
 
@@ -279,17 +429,32 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 12,
             'id_kriteria' => 2,
-            'nilai' => 0.26,
+            'nilai' => 0.61,
         ]);
         Penilaian::create([
             'id_alternatif' => 12,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.13,
         ]);
         Penilaian::create([
             'id_alternatif' => 12,
             'id_kriteria' => 4,
-            'nilai' => 0.13,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 12,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 12,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 12,
+            'id_kriteria' => 7,
+            'nilai' => 0.06,
         ]);
 
         // Alternatif 13
@@ -301,17 +466,32 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 13,
             'id_kriteria' => 2,
-            'nilai' => 0.61,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 13,
             'id_kriteria' => 3,
-            'nilai' => 0.04,
+            'nilai' => 0.13,
         ]);
         Penilaian::create([
             'id_alternatif' => 13,
             'id_kriteria' => 4,
-            'nilai' => 0.51,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 13,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 13,
+            'id_kriteria' => 6,
+            'nilai' => 0.09,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 13,
+            'id_kriteria' => 7,
+            'nilai' => 0.13,
         ]);
 
         // Alternatif 14
@@ -328,11 +508,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 14,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 14,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 14,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 14,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 14,
+            'id_kriteria' => 7,
             'nilai' => 0.26,
         ]);
 
@@ -340,7 +535,7 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 15,
             'id_kriteria' => 1,
-            'nilai' => 0.15,
+            'nilai' => 0.45,
         ]);
         Penilaian::create([
             'id_alternatif' => 15,
@@ -350,11 +545,26 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 15,
             'id_kriteria' => 3,
-            'nilai' => 0.45,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 15,
             'id_kriteria' => 4,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 15,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 15,
+            'id_kriteria' => 6,
+            'nilai' => 0.45,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 15,
+            'id_kriteria' => 7,
             'nilai' => 0.13,
         ]);
 
@@ -362,7 +572,7 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 16,
             'id_kriteria' => 1,
-            'nilai' => 0.04,
+            'nilai' => 0.45,
         ]);
         Penilaian::create([
             'id_alternatif' => 16,
@@ -372,33 +582,63 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 16,
             'id_kriteria' => 3,
-            'nilai' => 0.15,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 16,
             'id_kriteria' => 4,
-            'nilai' => 0.13,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 16,
+            'id_kriteria' => 5,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 16,
+            'id_kriteria' => 6,
+            'nilai' => 0.45,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 16,
+            'id_kriteria' => 7,
+            'nilai' => 0.06,
         ]);
 
         // Alternatif 17
         Penilaian::create([
             'id_alternatif' => 17,
             'id_kriteria' => 1,
-            'nilai' => 0.25,
-        ]);
-        Penilaian::create([
-            'id_alternatif' => 17,
-            'id_kriteria' => 2,
-            'nilai' => 0.61,
-        ]);
-        Penilaian::create([
-            'id_alternatif' => 17,
-            'id_kriteria' => 3,
             'nilai' => 0.09,
         ]);
         Penilaian::create([
             'id_alternatif' => 17,
+            'id_kriteria' => 2,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 17,
+            'id_kriteria' => 3,
+            'nilai' => 0.06,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 17,
             'id_kriteria' => 4,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 17,
+            'id_kriteria' => 5,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 17,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 17,
+            'id_kriteria' => 7,
             'nilai' => 0.06,
         ]);
 
@@ -411,105 +651,180 @@ class PenilaianSeeder extends Seeder
         Penilaian::create([
             'id_alternatif' => 18,
             'id_kriteria' => 2,
-            'nilai' => 0.26,
+            'nilai' => 0.61,
         ]);
         Penilaian::create([
             'id_alternatif' => 18,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.51,
         ]);
         Penilaian::create([
             'id_alternatif' => 18,
             'id_kriteria' => 4,
-            'nilai' => 0.06,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 18,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 18,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 18,
+            'id_kriteria' => 7,
+            'nilai' => 0.13,
         ]);
 
         // Alternatif 19
         Penilaian::create([
             'id_alternatif' => 19,
             'id_kriteria' => 1,
-            'nilai' => 0.09,
+            'nilai' => 0.15,
         ]);
         Penilaian::create([
             'id_alternatif' => 19,
             'id_kriteria' => 2,
-            'nilai' => 0.61,
+            'nilai' => 0.11,
         ]);
         Penilaian::create([
             'id_alternatif' => 19,
             'id_kriteria' => 3,
-            'nilai' => 0.04,
+            'nilai' => 0.13,
         ]);
         Penilaian::create([
             'id_alternatif' => 19,
             'id_kriteria' => 4,
-            'nilai' => 0.13,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 19,
+            'id_kriteria' => 5,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 19,
+            'id_kriteria' => 6,
+            'nilai' => 0.09,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 19,
+            'id_kriteria' => 7,
+            'nilai' => 0.06,
         ]);
 
         // Alternatif 20
         Penilaian::create([
             'id_alternatif' => 20,
             'id_kriteria' => 1,
-            'nilai' => 0.45,
-        ]);
-        Penilaian::create([
-            'id_alternatif' => 20,
-            'id_kriteria' => 2,
-            'nilai' => 0.11,
-        ]);
-        Penilaian::create([
-            'id_alternatif' => 20,
-            'id_kriteria' => 3,
             'nilai' => 0.04,
         ]);
         Penilaian::create([
             'id_alternatif' => 20,
+            'id_kriteria' => 2,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 20,
+            'id_kriteria' => 3,
+            'nilai' => 0.51,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 20,
             'id_kriteria' => 4,
-            'nilai' => 0.06,
+            'nilai' => 0.61,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 20,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 20,
+            'id_kriteria' => 6,
+            'nilai' => 0.04,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 20,
+            'id_kriteria' => 7,
+            'nilai' => 0.13,
         ]);
 
         // Alternatif 21
         Penilaian::create([
             'id_alternatif' => 21,
             'id_kriteria' => 1,
-            'nilai' => 0.15,
+            'nilai' => 0.45,
         ]);
         Penilaian::create([
             'id_alternatif' => 21,
             'id_kriteria' => 2,
-            'nilai' => 0.61,
+            'nilai' => 0.11,
         ]);
         Penilaian::create([
             'id_alternatif' => 21,
             'id_kriteria' => 3,
-            'nilai' => 0.09,
+            'nilai' => 0.06,
         ]);
         Penilaian::create([
             'id_alternatif' => 21,
             'id_kriteria' => 4,
-            'nilai' => 0.06,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 21,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 21,
+            'id_kriteria' => 6,
+            'nilai' => 0.15,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 21,
+            'id_kriteria' => 7,
+            'nilai' => 0.13,
         ]);
 
         // Alternatif 22
         Penilaian::create([
             'id_alternatif' => 22,
             'id_kriteria' => 1,
-            'nilai' => 0.04,
+            'nilai' => 0.45,
         ]);
         Penilaian::create([
             'id_alternatif' => 22,
             'id_kriteria' => 2,
-            'nilai' => 0.61,
+            'nilai' => 0.26,
         ]);
         Penilaian::create([
             'id_alternatif' => 22,
             'id_kriteria' => 3,
-            'nilai' => 0.15,
+            'nilai' => 0.13,
         ]);
         Penilaian::create([
             'id_alternatif' => 22,
             'id_kriteria' => 4,
-            'nilai' => 0.13,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 22,
+            'id_kriteria' => 5,
+            'nilai' => 0.11,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 22,
+            'id_kriteria' => 6,
+            'nilai' => 0.45,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 22,
+            'id_kriteria' => 7,
+            'nilai' => 0.51,
         ]);
     }
 }

@@ -108,7 +108,7 @@
                         </a>
                     </li>
 
-                    <li class="sidebar-title text-center text-bolder" style="color: #435ebe; font-size: 18px;">~ Proses
+                    {{-- <li class="sidebar-title text-center text-bolder" style="color: #435ebe; font-size: 18px;">~ Proses
                         SMARTER ~</li>
 
                     <li class="sidebar-item {{ request()->is('guest/data-akhir*') ? 'active' : '' }}">
@@ -116,7 +116,7 @@
                             <i class="bi bi-bar-chart-fill"></i>
                             <span>Hasil Akhir</span>
                         </a>
-                    </li>
+                    </li> --}}
                 </ul>
             @endguest
         </div>

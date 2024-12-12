@@ -222,9 +222,18 @@
                                                                 <label for="file_lokasi">File Lokasi</label>
                                                             </div>
                                                             <div class="col-md-8 form-group">
-                                                                <input type="file" id="file_lokasi" class="form-control"
-                                                                    name="file_lokasi" value="{{ $alternatif->file_lokasi }}"
-                                                                    required>
+                                                                <input type="file" id="file_lokasi"
+                                                                    class="form-control" name="file_lokasi">
+                                                                <span
+                                                                    id="file_lokasi_name">{{ $alternatif->file_lokasi }}</span>
+                                                                <script>
+                                                                    $(document).ready(function() {
+                                                                        $('#file_lokasi').on('change', function() {
+                                                                            var fileName = $(this).val().split('\\').pop();
+                                                                            $('#file_lokasi_name').text(fileName);
+                                                                        });
+                                                                    });
+                                                                </script>
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="tahun_pemilihan">Tahun Pemilihan</label>
@@ -277,7 +286,7 @@
                     <div class="modal-body">
                         <!-- Horizontal Form without Icons -->
                         <form action="{{ url('/admin/data-alternatif/tambah-alternatif') }}" class="form form-horizontal"
-                            method="POST" >
+                            method="POST">
                             @csrf
                             <div class="form-body">
                                 <div class="row">
