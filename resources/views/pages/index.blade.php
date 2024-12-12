@@ -73,8 +73,14 @@
                         <div id="map"></div>
                         <div id="legend-container" style="display: block;">
                             <h6>Keterangan</h6>
-                            <i style="background: blue; width: 18px; height: 18px; display: inline-block;"></i> Normal<br>
-                            <i style="background: red; width: 18px; height: 18px; display: inline-block;"></i> Prioritas Penanganan Stunting<br>
+                            <i style="background: #006BFF; width: 18px; height: 18px; display: inline-block;"></i> Stunting
+                            Rendah, Skor Akhir < 20<br>
+                                <i style="background: #08C2FF; width: 18px; height: 18px; display: inline-block;"></i>
+                                Stunting Sedang, Skor Akhir 20 - 30<br>
+                                <i style="background: #FC8F54; width: 18px; height: 18px; display: inline-block;"></i>
+                                Stunting Tinggi, Skor Akhir 30 - 40<br>
+                                <i style="background: #C62E2E; width: 18px; height: 18px; display: inline-block;"></i>
+                                Stunting Sangat Tinggi, Skor Akhir > 40<br>
                         </div>
                     </div>
                 </div>
@@ -104,6 +110,111 @@
     </style>
 
     <script>
+        window.onload = function() {
+            // Inisialisasi peta Leaflet
+            var map = L.map('map').setView([-3.9977177056713193, 122.52673846939604], 12);
+
+            // Tambahkan layer dari OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+                crossOrigin: true,
+            }).addTo(map);
+
+            // Data lokasi dari controller (JSON format)
+            var groupedScoresByYear = @json($groupedScoresByYear);
+
+            // Fungsi untuk menampilkan data pada peta berdasarkan tahun
+            function displayGeoJSONOnMap(selectedYear) {
+                // Hapus semua layer sebelumnya
+                map.eachLayer(function(layer) {
+                    if (layer instanceof L.GeoJSON) {
+                        map.removeLayer(layer);
+                    }
+                });
+
+                // Looping data berdasarkan tahun
+                Object.keys(groupedScoresByYear).forEach(function(year) {
+                    if (selectedYear && selectedYear !== year) {
+                        return; // Skip tahun yang tidak dipilih
+                    }
+
+                    var scores = groupedScoresByYear[year];
+                    scores.forEach(function(scoreData, index) {
+                        var geojsonFile = '/assets/Kota Kendari/' + scoreData.file_lokasi;
+
+                        // Muat file GeoJSON
+                        fetch(geojsonFile)
+                            .then(response => {
+                                if (!response.ok) {
+                                    throw new Error(`Gagal memuat file GeoJSON: ${geojsonFile}`);
+                                }
+                                return response.json();
+                            })
+                            .then(data => {
+                                // Tambahkan GeoJSON ke peta
+                                var geojsonLayer = L.geoJSON(data, {
+                                    style: function(feature) {
+                                        // Ambil nilai skor dari data GeoJSON
+                                        var score = scoreData
+                                            .score; // Pastikan 'score' ada di properties GeoJSON
+
+                                        // Tentukan warna berdasarkan kondisi score
+                                        var color;
+                                        if (score < 20) {
+                                            color = '#006BFF';
+                                        } else if (score >= 20 && score < 30) {
+                                            color =
+                                                '#08C2FF';
+                                        } else if (score >= 30 && score < 40) {
+                                            color =
+                                                '#FC8F54';
+                                        } else if (score >= 40) {
+                                            color = '#C62E2E';
+                                        }
+
+                                        // Kembalikan gaya untuk fitur ini
+                                        return {
+                                            color: color, // Warna border
+                                            weight: 5, // Ketebalan garis
+                                            fillOpacity: 0.7 // Transparansi isian
+                                        };
+                                    },
+                                    onEachFeature: function(feature, layer) {
+                                        // Tambahkan pop-up ke setiap polygon
+                                        var popupContent =
+                                            `<strong>Nama: ${scoreData.alternatif}</strong><br>` +
+                                            `<strong>Tahun: ${year}</strong><br>` +
+                                            `Peringkat: ${index + 1}<br>` +
+                                            `Skor: ${scoreData.score.toFixed(2)}<br>` +
+                                            `C1: ${scoreData.c1}<br>` +
+                                            `C2: ${scoreData.c2}<br>` +
+                                            `C3: ${scoreData.c3}<br>` +
+                                            `C4: ${scoreData.c4}<br>`;
+                                        layer.bindPopup(popupContent);
+                                    }
+                                }).addTo(map);
+                            })
+                            .catch(error => {
+                                console.error(`Error loading GeoJSON file (${geojsonFile}):`,
+                                    error);
+                            });
+                    });
+                });
+
+            }
+
+            // Tampilkan semua data pada peta saat halaman dimuat
+            displayGeoJSONOnMap("{{ request('tahun') }}");
+
+            // Update peta saat tahun dipilih
+            document.getElementById('selectYear').addEventListener('change', function() {
+                displayGeoJSONOnMap(this.value);
+            });
+        };
+    </script>
+
+
+    {{-- <script>
         window.onload = function() {
             // Inisialisasi peta Leaflet
             var map = L.map('map').setView([-3.9977177056713193, 122.52673846939604], 12); // Set lokasi awal peta
@@ -192,5 +303,5 @@
                 displayDataOnMap(this.value);
             });
         };
-    </script>
+    </script> --}}
 @endsection

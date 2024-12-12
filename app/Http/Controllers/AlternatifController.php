@@ -26,8 +26,12 @@ class AlternatifController extends Controller
             'c2' => 'required',
             'c3' => 'required',
             'c4' => 'required',
-            'latitude' => 'required',
-            'longitude' => 'required',
+            'c5' => 'required',
+            'c6' => 'required',
+            'c7' => 'required',
+            // 'latitude' => 'required',
+            // 'longitude' => 'required',
+            'file_lokasi' => 'required',
             'tahun_pemilihan' => 'required',
         ]);
 
@@ -38,8 +42,12 @@ class AlternatifController extends Controller
             'c2' => $request->c2,
             'c3' => $request->c3,
             'c4' => $request->c4,
-            'latitude' => $request->latitude,
-            'longitude' => $request->longitude,
+            'c5' => $request->c5,
+            'c6' => $request->c6,
+            'c7' => $request->c7,
+            // 'latitude' => $request->latitude,
+            // 'longitude' => $request->longitude,
+            'file_lokasi' => $request->input('file_lokasi'),
             'tahun_pemilihan' => $request->tahun_pemilihan,
         ]);
 
@@ -49,6 +57,7 @@ class AlternatifController extends Controller
 
     public function editAlternatif(Request $request, $id)
     {
+        // dd($request->all());
         $request->validate([
             'kode_alternatif' => 'required',
             'nama_alternatif' => 'required',
@@ -56,8 +65,12 @@ class AlternatifController extends Controller
             'c2' => 'required',
             'c3' => 'required',
             'c4' => 'required',
-            'latitude' => 'required',
-            'longitude' => 'required',
+            'c5' => 'required',
+            'c6' => 'required',
+            'c7' => 'required',
+            // 'latitude' => 'required',
+            // 'longitude' => 'required',
+            'file_lokasi' => 'required',
             'tahun_pemilihan' => 'required',
         ]);
 
@@ -70,8 +83,12 @@ class AlternatifController extends Controller
             'c2' => $request->c2,
             'c3' => $request->c3,
             'c4' => $request->c4,
-            'latitude' => $request->latitude,
-            'longitude' => $request->longitude,
+            'c5' => $request->c5,
+            'c6' => $request->c6,
+            'c7' => $request->c7,
+            // 'latitude' => $request->latitude,
+            // 'longitude' => $request->longitude,
+            'file_lokasi' => $request->input('file_lokasi'),
             'tahun_pemilihan' => $request->tahun_pemilihan,
         ]);
 

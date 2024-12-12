@@ -34,6 +34,21 @@ class PenilaianSeeder extends Seeder
             'id_kriteria' => 4,
             'nilai' => 0.26,
         ]);
+        Penilaian::create([
+            'id_alternatif' => 1,
+            'id_kriteria' => 5,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 1,
+            'id_kriteria' => 6,
+            'nilai' => 0.26,
+        ]);
+        Penilaian::create([
+            'id_alternatif' => 1,
+            'id_kriteria' => 7,
+            'nilai' => 0.26,
+        ]);
 
         // Alternatif 2
         Penilaian::create([

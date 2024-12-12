@@ -60,10 +60,14 @@
                                 <th>Nama Alternatif</th>
                                 <th>Jumlah Stunting</th>
                                 <th>Jumlah Ibu Hamil</th>
+                                <th>Jumlah Ibu Menyusui</th>
+                                <th>Anak Berusia 0-23 Bulan</th>
+                                <th>BBLR</th>
                                 <th>Kepadatan Penduduk</th>
                                 <th>Banyak Tenaga Ahli Gizi</th>
-                                <th>Lat</th>
-                                <th>Long</th>
+                                {{-- <th>Lat</th>
+                                <th>Long</th> --}}
+                                {{-- <th>File</th> --}}
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -77,8 +81,12 @@
                                     <td>{{ $alternatif->c2 }}</td>
                                     <td>{{ $alternatif->c3 }}</td>
                                     <td>{{ $alternatif->c4 }}</td>
-                                    <td>{{ round($alternatif->latitude, 3) }}</td>
-                                    <td>{{ round($alternatif->longitude, 3) }}</td>
+                                    <td>{{ $alternatif->c5 }}</td>
+                                    <td>{{ $alternatif->c6 }}</td>
+                                    <td>{{ $alternatif->c7 }}</td>
+                                    {{-- <td>{{ $alternatif->file_lokasi }}</td> --}}
+                                    {{-- <td>{{ round($alternatif->latitude, 3) }}</td>
+                                    <td>{{ round($alternatif->longitude, 3) }}</td> --}}
                                     <td>
                                         <span>
                                             <button class="btn btn-sm btn-warning" title="Edit" data-bs-toggle="modal"
@@ -171,6 +179,30 @@
                                                                     required>
                                                             </div>
                                                             <div class="col-md-4">
+                                                                <label for="c5">C5</label>
+                                                            </div>
+                                                            <div class="col-md-8 form-group">
+                                                                <input type="number" id="c5" class="form-control"
+                                                                    name="c5" value="{{ $alternatif->c5 }}"
+                                                                    required>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="c6">C6</label>
+                                                            </div>
+                                                            <div class="col-md-8 form-group">
+                                                                <input type="number" id="c6" class="form-control"
+                                                                    name="c6" value="{{ $alternatif->c6 }}"
+                                                                    required>
+                                                            </div>
+                                                            <div class="col-md-4">
+                                                                <label for="c7">C7</label>
+                                                            </div>
+                                                            <div class="col-md-8 form-group">
+                                                                <input type="number" id="c7" class="form-control"
+                                                                    name="c7" value="{{ $alternatif->c7 }}"
+                                                                    required>
+                                                            </div>
+                                                            {{-- <div class="col-md-4">
                                                                 <label for="latitude">Latitude</label>
                                                             </div>
                                                             <div class="col-md-8 form-group">
@@ -184,6 +216,14 @@
                                                             <div class="col-md-8 form-group">
                                                                 <input type="text" id="longitude" class="form-control"
                                                                     name="longitude" value="{{ $alternatif->longitude }}"
+                                                                    required>
+                                                            </div> --}}
+                                                            <div class="col-md-4">
+                                                                <label for="file_lokasi">File Lokasi</label>
+                                                            </div>
+                                                            <div class="col-md-8 form-group">
+                                                                <input type="file" id="file_lokasi" class="form-control"
+                                                                    name="file_lokasi" value="{{ $alternatif->file_lokasi }}"
                                                                     required>
                                                             </div>
                                                             <div class="col-md-4">
@@ -237,7 +277,7 @@
                     <div class="modal-body">
                         <!-- Horizontal Form without Icons -->
                         <form action="{{ url('/admin/data-alternatif/tambah-alternatif') }}" class="form form-horizontal"
-                            method="POST">
+                            method="POST" >
                             @csrf
                             <div class="form-body">
                                 <div class="row">
@@ -284,18 +324,46 @@
                                             placeholder="Masukan c4">
                                     </div>
                                     <div class="col-md-4">
+                                        <label for="c5">C5</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="number" id="c5" class="form-control" name="c5"
+                                            placeholder="Masukan c5">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="c6">C6</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="number" id="c6" class="form-control" name="c6"
+                                            placeholder="Masukan c6">
+                                    </div>
+                                    <div class="col-md-4">
+                                        <label for="c7">C7</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="number" id="c7" class="form-control" name="c7"
+                                            placeholder="Masukan c7">
+                                    </div>
+                                    {{-- <div class="col-md-4">
                                         <label for="latitude">Latitude</label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="text" id="latitude" class="form-control" name="latitude"
                                             placeholder="Masukan latitude">
-                                    </div>
-                                    <div class="col-md-4">
+                                    </div> --}}
+                                    {{-- <div class="col-md-4">
                                         <label for="longitude">Longitude</label>
                                     </div>
                                     <div class="col-md-8 form-group">
                                         <input type="text" id="longitude" class="form-control" name="longitude"
                                             placeholder="Masukan longitude">
+                                    </div> --}}
+                                    <div class="col-md-4">
+                                        <label for="file_lokasi">File Lokasi</label>
+                                    </div>
+                                    <div class="col-md-8 form-group">
+                                        <input type="file" id="file_lokasi" class="form-control" name="file_lokasi"
+                                            placeholder="Masukan file lokasi">
                                     </div>
                                     <div class="col-md-4">
                                         <label for="tahun_pemilihan">Tahun Pemilihan</label>

@@ -19,9 +19,13 @@ return new class extends Migration
             $table->integer('c2');
             $table->integer('c3');
             $table->integer('c4');
+            $table->integer('c5');
+            $table->integer('c6');
+            $table->integer('c7');
             $table->string('tahun_pemilihan');
-            $table->string('latitude');
-            $table->string('longitude');
+            // $table->string('latitude');
+            // $table->string('longitude');
+            $table->string('file_lokasi')->nullable();
             $table->timestamps();
         });
     }

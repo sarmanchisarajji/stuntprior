@@ -221,8 +221,9 @@ class DashboardController extends Controller
             $tahun = $alternatif->tahun_pemilihan;
             $groupedScoresByYear[$tahun][] = [
                 'alternatif' => $alternatif->nama_alternatif,
-                'latitude' => $alternatif->latitude,
-                'longitude' => $alternatif->longitude,
+                // 'latitude' => $alternatif->latitude,
+                // 'longitude' => $alternatif->longitude,
+                'file_lokasi' => $alternatif->file_lokasi,
                 'tahun' => $tahun,
                 'c1' => $alternatif->c1,
                 'c2' => $alternatif->c2,
@@ -356,8 +357,9 @@ class DashboardController extends Controller
             $tahun = $alternatif->tahun_pemilihan;
             $groupedScoresByYear[$tahun][] = [
                 'alternatif' => $alternatif->nama_alternatif,
-                'latitude' => $alternatif->latitude,
-                'longitude' => $alternatif->longitude,
+                // 'latitude' => $alternatif->latitude,
+                // 'longitude' => $alternatif->longitude,
+                'file_lokasi' => $alternatif->file_lokasi,
                 'tahun' => $tahun,
                 'c1' => $alternatif->c1,
                 'c2' => $alternatif->c2,
