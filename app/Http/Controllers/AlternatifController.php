@@ -70,7 +70,7 @@ class AlternatifController extends Controller
             'c7' => 'required',
             // 'latitude' => 'required',
             // 'longitude' => 'required',
-            // 'file_lokasi' => 'required',
+            'file_lokasi',
             'tahun_pemilihan' => 'required',
         ]);
 
@@ -86,15 +86,10 @@ class AlternatifController extends Controller
             'c5' => $request->c5,
             'c6' => $request->c6,
             'c7' => $request->c7,
-            // 'latitude' => $request->latitude,
-            // 'longitude' => $request->longitude,
+            'file_lokasi' => $request->file_lokasi,
             'tahun_pemilihan' => $request->tahun_pemilihan,
         ];
-    
-        if ($request->hasFile('file_lokasi')) {
-            $data['file_lokasi'] = $request->input('file_lokasi');
-        }
-    
+
         $alternatif->update($data);
 
         toast('Berhasil ubah data!', 'success');

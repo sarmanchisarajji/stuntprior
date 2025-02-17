@@ -223,17 +223,11 @@
                                                             </div>
                                                             <div class="col-md-8 form-group">
                                                                 <input type="file" id="file_lokasi"
-                                                                    class="form-control" name="file_lokasi">
-                                                                <span
-                                                                    id="file_lokasi_name">{{ $alternatif->file_lokasi }}</span>
-                                                                <script>
-                                                                    $(document).ready(function() {
-                                                                        $('#file_lokasi').on('change', function() {
-                                                                            var fileName = $(this).val().split('\\').pop();
-                                                                            $('#file_lokasi_name').text(fileName);
-                                                                        });
-                                                                    });
-                                                                </script>
+                                                                    class="form-control" name="file_lokasi"
+                                                                    value="{{ $alternatif->file_lokasi }}">
+                                                                @if ($alternatif->file_lokasi)
+                                                                    <span>{{ $alternatif->file_lokasi }}</span>
+                                                                @endif
                                                             </div>
                                                             <div class="col-md-4">
                                                                 <label for="tahun_pemilihan">Tahun Pemilihan</label>
